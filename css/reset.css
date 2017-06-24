@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,  sub, sup, var, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary ,hr{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+main, article, aside, figure, footer, header, nav, section, details, summary {
+	display: block;
+}
+body{
+	font-size: 12px;
+	font-family:'';
+	letter-spacing: 1px;
+	background: #f4f3ef;
+}
+address,em{
+	font-style: normal;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+}
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+img{
+	border: none;
+}
+li{
+	list-style: none;
+}
+input,select,textarea{
+	outline: none;
+	border: none;
+}
+textarea{
+	resize: none;
+}
+a{
+	text-decoration: none;
+	font-family: '';
+	color: #656565;
+}
+p:focus{
+	outline:none;
+}
+/* clearfix */
+.clearfix:after{
+	content: "";display: block;clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+/* float */
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+/* hide */
+.hide{
+	display: none!important;
+}
+.show{
+	display: block;
+}
+/* *tag */
+.star:after{
+	content: '*';
+	font-weight: 100;
+	color: #FF6605;
+}
+

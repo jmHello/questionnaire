@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调查问卷示例</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="jmModule/j_ownCss.css">
+</head>
+<body>
+<!-- questionnaire operation -->
+<div class="questionnaire" id="jm_questionnaire"></div>
+<!-- show questionnaire -->
+<div class="c_item_detail" id="show_qR"></div>
+<script type="text/javascript" src="j_ownlibrary.js"></script>
+<script type="text/javascript" src="jmModule/j_plugIn.js"></script>
+<script type="text/javascript">
+/**
+ * questionnaire operation
+ */
+var jm_questionnaire=document.getElementById('jm_questionnaire'),
+        queType=new JM.component.QueType(jm_questionnaire);
+queType.init();
+//ajax:sendData
+queType.sendData(function (info) {
+    /**
+     * @param {Object}info
+     * @example
+     * {
+        'type':'问卷类型',
+        'title':'问卷标题',
+        'filled':'是否必填',
+        'content':'选项',
+        'description':'备注'
+        }
+     */
+    JM.ajax();
+});
+/**
+ * show questionnaire
+ */
+var show_qR=JM.getEle('#show_qR'),
+    questionnareResult=new JM.component.QueResult(show_qR);
+questionnareResult.init();
+var data={
+    "questionPaper": {
+        "active": 1,
+        "createtime": "",
+        "id": 1,
+        "title": "test paper title111",
+        "type": "1",
+        'description':'welcome',
+        "userId": 0
+    },
+    "questions": [
+        {
+            "content": "aa&22&33",
+            "createtime": "2017-06-07 00:00",
+            "id": 0,
+            "questionPaperId": 0,
+            "title": "test question title1",
+            'description':'hello',
+            'filled':1,
+            "type": 1
+        },{
+            "content": "aa&22&33",
+            "createtime": "2017-06-07 00:00",
+            "id": 0,
+            "questionPaperId": 0,
+            "title": "test question title2",
+            'description':'happy',
+            'filled':1,
+            "type": 2
+        },{
+            "content": "11&22&3333",
+            "createtime": "2017-06-07 00:00",
+            "id": 0,
+            "questionPaperId": 0,
+            "title": "test question title3",
+            'description':'beautiful',
+            'filled':1,
+            "type":3
+        },{
+            "content": "",
+            "createtime": "2017-06-07 00:00",
+            "id": 0,
+            "questionPaperId": 0,
+            "title": "test question title4",
+            'description':'sad',
+            'filled':1,
+            "type":4
+        },{
+            "content": "",
+            "createtime": "2017-06-07 00:00",
+            "id": 0,
+            "questionPaperId": 0,
+            "title": "test question title5",
+            'description':'singing',
+            'filled':0,
+            "type":5
+        }]
+};
+
+
+questionnareResult.show(data.questionPaper,data.questions);
+</script>
+</body>
+</html>
